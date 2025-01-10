@@ -8,4 +8,4 @@ AnilistPython==0.1.3
 pycryptodome
 m3u8
 python-telegram-bot
-python-dotenv
+
