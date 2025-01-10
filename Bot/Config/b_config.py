@@ -2,7 +2,7 @@ import time
 import os 
 
 TOKEN = "6105757517:AAHS2KgJDLuEErCoLyxkfOjCYwUhOZSvnlY"
-WEBHOOK_URL = os.environ.get('Webhook_url', None)
+WEBHOOK_URL = os.environ.get('WEBHOOK_URL', None)
 DATABASE_URL = 'mongodb+srv://AnimeFlix:Itzmecp@cluster0.qxdxy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 START_IMG = 'https://i.ibb.co/d4RQ9Df/file-1353.jpg'
 
