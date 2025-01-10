@@ -1,4 +1,4 @@
-import os
+ import os
 from dotenv import load_dotenv
 import time
 
@@ -7,7 +7,7 @@ load_dotenv()
 
 # Bot Token and Webhook URL
 TOKEN = os.getenv("BOT_TOKEN")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")
+WEBHOOK_URL = os.environ.get("WEBHOOK_URL", None)
 
 # Database URL
 DATABASE_URL = os.getenv("DATABASE_URL")
