@@ -1,22 +1,36 @@
+import os
+from dotenv import load_dotenv
 import time
-import os 
 
-TOKEN = ''6105757517:AAHS2KgJDLuEErCoLyxkfOjCYwUhOZSvnlY"
-WEBHOOK_URL = os.environ.get('Webhook_url', None)
-DATABASE_URL = 'mongodb+srv://AnimeFlix:Itzmecp@cluster0.qxdxy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-START_IMG = 'https://i.ibb.co/d4RQ9Df/file-1353.jpg'
+# Load environment variables from a .env file
+load_dotenv()
 
+# Bot Token and Webhook URL
+TOKEN = os.getenv("BOT_TOKEN")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 
+# Database URL
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Start Image
+START_IMG = os.getenv("START_IMG", 'https://i.ibb.co/d4RQ9Df/file-1353.jpg')
+
+# Start Time
 START_TIME = int(time.time())
 
-MAIN_CHANNEL = '-1001824105670'
-MAIN_GROUP = -1001857744371
-UPDATE_CHANNEL = -1001824105670
-LOG_CHAT = -1002092856252
-TEMP_CHAT= -1002092856252
-SUDO_USERS  = [1895952308]
+# Channel and Group IDs
+MAIN_CHANNEL = os.getenv("MAIN_CHANNEL", '-1001824105670')
+MAIN_GROUP = int(os.getenv("MAIN_GROUP", -1001857744371))
+UPDATE_CHANNEL = os.getenv("UPDATE_CHANNEL", '-1001824105670')
+LOG_CHAT = int(os.getenv("LOG_CHAT", -1002092856252))
+TEMP_CHAT = int(os.getenv("TEMP_CHAT", -1002092856252))
 
-UPDATE_CHANNEL_INVITE_LINK = 'https://t.me/Anime_DownLord'
+# Sudo Users
+SUDO_USERS = list(map(int, os.getenv("SUDO_USERS", "1895952308").split(',')))
 
-GOGO_ACC = "itzmecp@yahoo.com"
-GOGO_PW = "Pasiya@2007"
+# Update Channel Invite Link
+UPDATE_CHANNEL_INVITE_LINK = os.getenv("UPDATE_CHANNEL_INVITE_LINK", 'https://t.me/Anime_DownLord')
+
+# GogoAnime Credentials
+GOGO_ACC = os.getenv("GOGO_ACC")
+GOGO_PW = os.getenv("GOGO_PW")
