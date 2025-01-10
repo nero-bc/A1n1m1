@@ -1,4 +1,4 @@
-from Config import TOKEN, WEBHOOK_URL
+from Config import TOKEN, WEBHOOK_URL, PORT
 from Easy_Bot import _powerup_bot_, commnders, Messengers, Callbacker, Filters
 from Plugins.Commands import (
     start_command, latest_command, popular_command, broadcast_command, restart_per_2_hours,
@@ -14,7 +14,6 @@ import os
 from warnings import filterwarnings
 
 filterwarnings(action='ignore', category=DeprecationWarning)
-PORT = int(os.environ.get('PORT', '8443'))
 
 async def main(WEBHOOK_URL, TOKEN):
     bot = Bot(TOKEN)
