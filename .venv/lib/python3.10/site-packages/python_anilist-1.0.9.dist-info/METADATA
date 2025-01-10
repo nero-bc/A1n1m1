@@ -1,0 +1,195 @@
+Metadata-Version: 2.1
+Name: python-anilist
+Version: 1.0.9
+Summary: A simple wrapper for AniList.
+Home-page: https://github.com/AmanoTeam/python-anilist
+Author: AmanoTeam
+Author-email: contact@amanoteam.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: AsyncIO
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSES/MIT.txt
+Requires-Dist: httpx[http2] (>=0.14.0)
+Provides-Extra: testing
+Requires-Dist: pytest (>=6.2) ; extra == 'testing'
+Requires-Dist: pytest-cov (>=2.12) ; extra == 'testing'
+Requires-Dist: tox (>=3.24) ; extra == 'testing'
+
+<!--
+  ~ Copyright (C) 2021-2022 Amano Team <https://amanoteam.com/>, nfitzen
+  ~ 
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+# python-anilist
+
+[![License](https://img.shields.io/github/license/AmanoTeam/aiodown)](https://github.com/AmanoTeam/python-anilist/raw/main/LICENSE)
+![Tests](https://github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject/actions/workflows/tests.yml/badge.svg)
+![Code style](https://img.shields.io/badge/code%20style-black-000000.svg)
+[![Contributors](https://img.shields.io/github/contributors/AmanoTeam/python-anilist.svg)](https://github.com/AmanoTeam/python-anilist/graphs/contributors)
+[![PyPi](https://badge.fury.io/py/python-anilist.svg)](https://pypi.org/project/python-anilist/)
+
+> A simple wrapper with full support for `asyncio` made in `Python 3` for [Anilist](//anilist.co) using [httpx](//github.com/encode/httpx).
+
+## Requirements
+
+- Python 3.7 or higher.
+- httpx 0.14 or higher.
+
+## Installation
+
+**NOTE:** If `python3` is "not a recognized command" try using `python` instead.
+
+For the latest stable version:
+```sh
+python3 -m pip install python-anilist
+```
+
+For the latest development version:
+```sh
+python3 -m pip install git+https://github.com/AmanoTeam/python-anilist.git#egg=python-anilist
+```
+
+## What's left to do?
+
+- Write the API Documentation.
+- Show some examples.
+
+## Credits
+
+* [AnilistPy](//github.com/anilistpy/anilistpy): for inspiration.
+
+## License
+
+Copyright © 2021-2022 [AmanoTeam](https://github.com/AmanoTeam)
+and the python-anilist contributors
+
+Licensed under the [Expat/MIT license](LICENSE).
+This project is also [REUSE compliant](https://reuse.software/).
+See individual files for more copyright information.
+
+
+<!--
+  ~ Copyright (C) 2021-2022 Amano Team <https://amanoteam.com/>
+  ~ 
+  ~ SPDX-License-Identifier: MIT
+  -->
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+
+## 1.0.9 (February 16th, 2022)
+
+### Added
+
+- hotfix: queries: add missing `pageInfo` from https://github.com/AmanoTeam/python-anilist/commit/2c9f7efd5127371fd09b6630c1564c13755131d1.
+
+## 1.0.8 (February 16th, 2022)
+
+### Added
+
+- `.relations` for animes and mangas.
+
+### Changed
+
+- Separate queries into separate files.
+- Happy new year (late).
+
+## 1.0.7 (January 18th, 2022)
+
+### Added
+
+- Pagination.
+- `rewatched` and `reread` activity status.
+
+### Changed
+
+- Fix .vscode gitignore.
+- Fix user and staff search queries.
+- Update get_activity type error.
+
+## 1.0.6 (October 20th, 2021)
+
+### Added
+
+- Support for `Python 3.10`.
+
+### Changed
+
+- Fixed subpackages.
+
+## 1.0.5 (August 4th, 2021)
+
+### Added
+
+- List get query.
+- Staff get query.
+- Staff search query.
+- User search query.
+- Fixed message activity.
+- Added `alternative` attribute to the Name object.
+- Message activities.
+- Support for users, favourites, staff, statistics, rankings, and studios.
+- Support for user list and text activities.
+
+### Changed
+
+- Fixed typos & bugs.
+- Added `is_adult` to both anime and manga objects.
+- Added user object to text activities.
+- Added profile colors and other fields to the user object.
+- Added timestamps to the date object.
+- Tidied up and organized required fields in every object.
+
+## 1.0.4 (April 5th, 2021)
+
+### Changed
+
+- Hotfix, fix a typo on get manga.
+
+## 1.0.3 (April 4th, 2021)
+
+### Added
+
+- Support for characters.
+
+### Changed
+
+- HTTP2 enabled (async mode only).
+
+## 1.0.2 (March 8th, 2021)
+
+### Added
+
+- Support for mangas.
+
+### Changed
+
+- Some bug fixes.
+
+## 1.0.1 (March 8th, 2021)
+
+### Changed
+
+- Bug fixes.
+
+## 1.0.0 (March 8th, 2021)
+
+* First release
+
+
