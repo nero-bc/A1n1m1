@@ -1,5 +1,5 @@
 heroku3==5.2.1
-pymongo==4.10
+pymongo==4.18.3
 ptb-easy-bot==0.0.5
 beautifulsoup4>=4.12.3,<5.0.0
 requests>=2.32.0,<3.0.0
